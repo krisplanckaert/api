@@ -1,6 +1,7 @@
 <?php
 
-class ApiController extends Zend_Controller_Action
+class ApiController extends Zend_Http_Client
+//Zend_Controller_Action
 {
     public function init()
     {

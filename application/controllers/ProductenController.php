@@ -6,6 +6,7 @@ class ProductenController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+
         ini_set("soap.wsdl_cache_enabled", 0);
         ini_set("soap.wsdl_cache_ttl", 0);
     }
@@ -54,12 +55,6 @@ class ProductenController extends Zend_Controller_Action
             $server->handle();
         }
         
-    }
-
-    public function restAction() 
-    {
-        $client = new Zend_Rest_Client('http://localhost:8010/api/');    
-        echo $client->get();
     }
 
 }
